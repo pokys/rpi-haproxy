@@ -1,7 +1,7 @@
 ## Haproxy Dockerfile
 
 
-This repository contains a port of the **Dockerfile** of [Haproxy](http://haproxy.1wt.eu/) the Raspberry Pi.
+This repository contains a port of the **Dockerfile** of [Haproxy](http://haproxy.1wt.eu/) for the Raspberry Pi.
 
 Many kudos to the upstream repo https://github.com/dockerfile/haproxy
 
