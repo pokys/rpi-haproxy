@@ -12,7 +12,7 @@ Many kudos to the upstream repo https://github.com/dockerfile/haproxy
 
 ### Installation
 
-1. Install [Docker](https://www.docker.com/).
+1. Install [Docker](https://www.docker.com/) by downloading the [HypriotOS SD card image](http://blog.hypriot.com/heavily-armed-after-major-upgrade-raspberry-pi-with-docker-1-dot-5-0).
 
 2. Download [automated build](https://registry.hub.docker.com/u/hypriot/rpi-haproxy/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull hypriot/rpi-haproxy`
 
