@@ -1,4 +1,4 @@
-## Haproxy Dockerfile
+## rpi-haproxy
 
 
 This repository contains a port of the **Dockerfile** of [Haproxy](http://haproxy.1wt.eu/) for the Raspberry Pi.
