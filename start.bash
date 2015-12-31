@@ -26,13 +26,8 @@ if [[ -f "$OVERRIDE/$CONFIG" ]]; then
   ln -s "$OVERRIDE/$CONFIG" "$CONFIG"
 fi
 
-quitall () {
-  kill -TERM $(cat $PIDFILE)
-} 
-
 if [ $# -eq 0 ]; then
-  trap 'quitall ' TERM INT
-  haproxy -f /etc/haproxy/haproxy.cfg -p "$PIDFILE"
+  exec haproxy -f /etc/haproxy/haproxy.cfg -p "$PIDFILE"
 else
-  haproxy -f /etc/haproxy/haproxy.cfg -p "$PIDFILE" -sf $(cat $PIDFILE)
+  exec haproxy -f /etc/haproxy/haproxy.cfg -p "$PIDFILE" -sf $(cat $PIDFILE)
 fi
