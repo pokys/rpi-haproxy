@@ -31,11 +31,14 @@ quitall () {
 } 
   
 if [ $# -eq 0 ]; then
+  echo "trap"
   trap 'quitall ' TERM INT  
-  haproxy -D -f /etc/haproxy/haproxy.cfg -p "$PIDFILE" &
-  while 1; do
+  haproxy -D -f /etc/haproxy/haproxy.cfg -p "$PIDFILE"
+  while true; do
     sleep 3600
   done
 else
+  echo "reloading haproxy"
+  cat $PIDFILE
   haproxy -D -f /etc/haproxy/haproxy.cfg -p "$PIDFILE" -sf $(cat "$PIDFILE") &
 fi
